@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const fetch = require("node-fetch");
-const port = 3000;
+const port = 3000 || process.env.PORT;
+
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //let name = document.querySelector(".name");
